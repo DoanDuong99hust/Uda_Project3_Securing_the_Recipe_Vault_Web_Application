@@ -1,0 +1,18 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data 
+and access the application web service, identify at least 2 obvious poor practices 
+as it relates to security.  Include justification.
+
+# Poor practice 1
+VPC security group rules should not permit ingress from '0.0.0.0/0' to TCP/UDP port 22 (SSH)
+
+# Poor practice 2
+S3 bucket server side encryption should be enabled
+
+# Poor practice 3
+S3 buckets should have all `block public access` options enabled
+
+# Poor practice 4
+S3 bucket policies should only allow requests that use HTTPS
+
+# Poor practice 5
+IAM role shouldn't have permission as admin with s3

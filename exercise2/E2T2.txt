@@ -1,0 +1,11 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+- VPC security group rules permit ingress from '0.0.0.0/0' to TCP/UDP port 22 (SSH)
+- S3 buckets don't have all `block public access` options enabled
+- S3 bucket policies allow requests that use HTTP
+- IAM role has permission as admin with s3
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- VPC security group rules should not permit ingress from '0.0.0.0/0' to TCP/UDP port 22 (SSH)
+- S3 buckets should have all `block public access` options enabled
+- S3 bucket policies should only allow requests that use HTTPS
+- Retrict permission for IAM Role for S3

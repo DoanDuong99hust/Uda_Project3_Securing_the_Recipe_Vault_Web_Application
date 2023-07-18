@@ -1,0 +1,12 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Apply Application Load Balancer in front of the web application instance to distribute traffic across multiple instances
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- Wouldn't, because using VPC private endpoints alone cannot prevent the unauthorized access to the secrets bucket
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- No need because only new objects will get affected by encrypting.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+- All the configuration will be reset following the original cloud formation templates.
